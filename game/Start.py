@@ -1,3 +1,4 @@
+# 시작층 화면연출 구현입니다. (지하6층)
 import pygame
 import sys
 
