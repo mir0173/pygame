@@ -1,3 +1,4 @@
+# 물건 인터렉션 구현입니다
 import pygame
 import sys
 import math
