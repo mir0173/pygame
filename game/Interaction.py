@@ -1,4 +1,4 @@
-# 물건 인터렉션 구현입니다
+# 물건 인터렉션 구현입니다 (예시는 지하4층과 빈 연구노트)
 import pygame
 import sys
 import math
