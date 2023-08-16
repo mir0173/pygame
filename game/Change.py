@@ -1,4 +1,4 @@
-# 같은 층에서 다른 방 넘어갈때 화면전환 구현입니다
+# 같은 층에서 다른 방 넘어갈때 화면전환 구현입니다 (예시는 지하4층)
 import pygame
 import sys
 import math
