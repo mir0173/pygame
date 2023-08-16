@@ -1,3 +1,4 @@
+# 같은 층에서 다른 방 넘어갈때 화면전환 구현입니다
 import pygame
 import sys
 import math
