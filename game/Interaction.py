@@ -1,7 +1,7 @@
-# 물건 인터렉션 구현입니다 (예시는 지하4층과 빈 연구노트)
 import pygame
 import sys
 import math
+
 
 def main():
     pygame.init()
@@ -26,32 +26,32 @@ def main():
     gravity = 0
     a = 0
     dt = clock.tick(60)
-    
-    BLACK = (0,0,0)
-    WHITE = (255,255,255)
-    
-    fontObj = pygame.font.Font("freesansbold.ttf",16)
-    fontObj2 = pygame.font.Font("freesansbold.ttf",32)
-    textSurfaceObj = fontObj.render("Interact with the E key.",True,WHITE)
-    textJournal = fontObj2.render("Close with the X key.",True,WHITE)
+
+    BLACK = (0, 0, 0)
+    WHITE = (255, 255, 255)
+
+    fontObj = pygame.font.Font("freesansbold.ttf", 16)
+    fontObj2 = pygame.font.Font("freesansbold.ttf", 32)
+    textSurfaceObj = fontObj.render("Interact with the E key.", True, WHITE)
+    textJournal = fontObj2.render("Close with the X key.", True, WHITE)
 
     while True:
-        
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit;
-                        
+
         key_INPUT = pygame.key.get_pressed()
-        if key_INPUT[pygame.K_LEFT] and player.left >=0 and a == 0:
-            player.left -= game_speed*dt
+        if key_INPUT[pygame.K_LEFT] and player.left >= 0 and a == 0:
+            player.left -= game_speed * dt
         if key_INPUT[pygame.K_RIGHT] and player.right <= 1400 and a == 0:
-            player.right += game_speed*dt
-        if key_INPUT[pygame.K_e]:
+            player.right += game_speed * dt
+        if key_INPUT[pygame.K_e] and result < 300:
             a = 1
         if key_INPUT[pygame.K_x]:
             a = 0
-            
+
         player.top += gravity
         gravity += 0.05
 
@@ -59,17 +59,18 @@ def main():
             gravity = 0
             if key_INPUT[pygame.K_UP] and a == 0:
                 gravity = -4
-        
-        background.blit(image_bg, (-400,0))
-        result = math.sqrt( math.pow(player.centerx - wadpaper.centerx, 2) + math.pow(player.centery - wadpaper.centery, 2))
+
+        background.blit(image_bg, (-400, 0))
         background.blit(image_wadpaper, wadpaper)
-        if(result <300 and a == 0):
-            background.blit(textSurfaceObj,textRectObj)
+        result = math.sqrt(math.pow(player.centerx - wadpaper.centerx, 2) + math.pow(player.centery - wadpaper.centery, 2))
+        if (result < 300 and a == 0):
+            background.blit(textSurfaceObj, textRectObj)
         background.blit(image_hero, player)
-        if(a == 1):
-            background.blit(image_gray,gray)
-            background.blit(image_journal1,journal1)
-            background.blit(textJournal,textjournal)
+        if (result < 300 and a == 1):
+            background.blit(image_gray, gray)
+            background.blit(image_journal1, journal1)
+            background.blit(textJournal, textjournal)
         pygame.display.update()
-   
+
+
 main()
