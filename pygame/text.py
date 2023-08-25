@@ -30,14 +30,8 @@ B1 = pygame.image.load('./image/B1.jpg')
 ilus_1= pygame.image.load('./image/B3.jpg')
 ilus_2 = pygame.image.load('./image/B3.jpg')
 ilus_3 = pygame.image.load('./image/B3.jpg')
-BGpos = (0, 0)
-B6pos = (-200, 0)
-B5pos = (-200, 0)
-B4pos = (-400, 0)
-B3pos = (-400, 0)
-B2pos = (-400, 0)
-B1pos = (300, 0)
-iluspos = (-400, 0)
+bgpos = (0, 0)
+
 
 text = [[0, "으윽...", "여기가... 어디지?", "왜 이렇게 어둡지...? 사고라도 난 건가...", "다친 곳은 없는 것 같으니... 일단 앞으로 가야겠군", 0],
 [0, "흠... 아무래도 문이 잠겨있는 것 같군", "어떻게 나가야 하지?", 0],
@@ -190,6 +184,5 @@ namepos = [[0, texthero, texthero, texthero, texthero, 0],
 
 
 background = [B6_1, B6_2, B6_2, B6_2, B6_3, B6_3, B5_1, B5_2, B5_3, B5_4, B5_4, B5_5, B5_5, B5_5, B4_1, B4_2, B4_3, B4_3, B4_4, B3_1, B3_1, B3_2, ilus_1, ilus_2, ilus_3, ilus_3, B3_3]
-bgpos = [B6pos, B6pos, B6pos, B6pos, B6pos, B6pos, B5pos, B5pos, B5pos, B5pos, B5pos, B5pos, B5pos, B5pos, B4pos, B4pos, B4pos, B4pos, B4pos, B3pos, B3pos, B3pos, iluspos, iluspos, iluspos, iluspos, B3pos]
-tuto = ["A, D키를 이용해 좌우로 이동할 수 있습니다", "어떤 물체들은 가까이 갈 시 E키를 통해 상호작용할 수 있습니다", "이제부터 주인공이 가까이 가면 전등이 자동으로 켜집니다"]
-inter1 = [0, "이 정도로 큰 사고가 일어났다니...", "내가 살아 남은 게 기적이군...", 0]
+'''tuto = ["A, D키를 이용해 좌우로 이동할 수 있습니다", "어떤 물체들은 가까이 갈 시 E키를 통해 상호작용할 수 있습니다", "이제부터 주인공이 가까이 가면 전등이 자동으로 켜집니다"]
+inter1 = [0, "이 정도로 큰 사고가 일어났다니...", "내가 살아 남은 게 기적이군...", 0]'''

@@ -1,12 +1,11 @@
 #실질적 실행파일입니다.
 
 import pygame
-from start import first, playtext, starttext
-from text import background, bgpos, name
-a = 20
+from start import  playtext, starttext
+from text import background, bgpos
+
 
 def main():
-    global a
     #first()
     pygame.event.clear(pygame.MOUSEBUTTONDOWN)
     pygame.event.clear(pygame.KEYDOWN)
@@ -17,9 +16,8 @@ def main():
                 playtext()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_e:
-                    starttext(a, background[a], bgpos[a])
+                    starttext(20, background[20], bgpos)
                     pygame.event.clear()
-                    a += 1
 
 
 

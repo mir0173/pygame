@@ -11,7 +11,7 @@ textRectObj = pygame.Rect(768, 300, 0, 0)
 textRectObj2 = pygame.Rect(720, 400, 0, 0)
 textplayer = pygame.Rect(20, 770, 0, 0)
 texthero = pygame.Rect(1410, 690, 0, 0)
-gray = pygame.Rect(0, 0, 0, 0)
+gray = pygame.Rect(0, 760, 0, 0)
 hero = pygame.Rect(-75, 550, 0, 0)
 Hero = pygame.image.load('./image/hero2.png')
 image_gray = pygame.image.load('./image/gray.png')
@@ -21,7 +21,6 @@ index = -1
 WHITE = (255, 255, 255)
 fontObj = pygame.font.SysFont("malgungothic", 32)
 fontObj2 = pygame.font.SysFont("malgungothic", 46)
-fontObj3 = pygame.font.Font("freesansbold.ttf", 64)
 textenum = 0;
 
 
@@ -29,7 +28,7 @@ textenum = 0;
 
 
 
-def first():
+'''def first():
     image_bg = pygame.image.load('./image/B6.jpg')
     bgpos = (-200, 0)
     global gray, touchtexting
@@ -75,18 +74,19 @@ def first():
         pygame.display.update()
         pygame.time.wait(25)
     pygame.time.wait(200)
-    gray = pygame.Rect(0, 760, 0, 0)
+    gray = pygame.Rect(0, 760, 0, 0)'''
 
 def playtext():
     global index, textenum
     if(index == -1):
         return
     index += 1
+    print(textenum)
     print(index)
 
 
     if text[textenum][index] == 0 and index > 0:
-        endtext(textenum)
+        endtext()
         return
 
 
@@ -102,6 +102,7 @@ def playtext():
 
 def starttext(k, image_bg1, bgpos1):
     global index, textenum, image_bg, bgpos
+    textenum = k
     image_bg = image_bg1
     bgpos = bgpos1
     if(index != -1):
@@ -110,24 +111,23 @@ def starttext(k, image_bg1, bgpos1):
     for n in range(1, 50):
         background.blit(image_bg, bgpos)
         image_gray.set_alpha(2 * n)
-        char[k][index + 1].set_alpha(5 * n)
-        background.blit(char[k][index + 1], pos[k][index + 1])
+        char[textenum][index + 1].set_alpha(5 * n)
+        background.blit(char[textenum][index + 1], pos[textenum][index + 1])
         background.blit(image_gray, gray)
         pygame.display.update()
         pygame.time.wait(10)
-    textenum = k
     playtext()
 
 
 
-def endtext(k):
+def endtext():
     global index
     for n in range(1, 50):
         background.blit(image_bg, bgpos)
         image_gray.set_alpha(100 - 2 * n)
-        char[k][index - 1].set_alpha(250 - 5 * n)
-        background.blit(char[k][index - 1], pos[k][index - 1])
+        char[textenum][index - 1].set_alpha(250 - 5 * n)
+        background.blit(char[textenum][index - 1], pos[textenum][index - 1])
         background.blit(image_gray, gray)
         pygame.display.update()
         pygame.time.wait(10)
-    index = -1;
+    index = -1
