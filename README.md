@@ -3,7 +3,6 @@
 <img src="https://img.shields.io/badge/made by-anim-red">
 <img src="https://img.shields.io/badge/with-mingu-yello">
 <img src="https://img.shields.io/badge/Pygame-2.5.1-yellow">
-<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
 </p>
 <br/><br/><br/><br/>
 
