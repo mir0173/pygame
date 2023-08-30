@@ -1,4 +1,11 @@
 # pygame
+<h1 align="center"><b>Eden`s Laboratory</b></h1>
+<p align="center">
+<img src="https://img.shields.io/badge/made by-anim-red">
+<img src="https://img.shields.io/badge/with-404142-yello">
+<img src="https://img.shields.io/badge/Python-pygame-yellow">
+<img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
+
 
 한양대와 함께하는 "2023 전국 청소년 오픈SW GAME 코딩대회 with파이썬
 
@@ -16,6 +23,8 @@
 
 
 + with 일러레 김민구
+
+
 
 
 현재 완료 상황
