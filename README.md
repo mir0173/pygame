@@ -1,7 +1,7 @@
 <h1 align="center"><b>Eden`s Company</b></h1>
 <p align="center">
 <img src="https://img.shields.io/badge/made by-anim-red">
-<img src="https://img.shields.io/badge/with-404142-yello">
+<img src="https://img.shields.io/badge/with-mingu-yello">
 <img src="https://img.shields.io/badge/Python-pygame-yellow">
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" >
 </p>
