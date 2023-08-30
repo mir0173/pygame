@@ -3,12 +3,12 @@
 import pygame
 
 textlucy = pygame.Rect(1410, 690, 0, 0)
-textmica1 = pygame.Rect(1450, 690, 0, 0)
-textmica2 = pygame.Rect(1410, 690, 0, 0)
+texturi1 = pygame.Rect(1450, 690, 0, 0)
+texturi2 = pygame.Rect(1410, 690, 0, 0)
 Lucy = pygame.image.load('./assets/lucyfer.png')
-Mica = pygame.image.load('./assets/michael.png')
+Uri = pygame.image.load('./assets/uriel.png')
 lucy = pygame.Rect(-75, 550, 0, 0)
-mica = pygame.Rect(-75, 550, 0, 0)
+uri = pygame.Rect(-75, 550, 0, 0)
 
 text = [[0, "으윽...", "여기가... 어디지?", "벽이 왜 다 부서졌지...? 사고라도 난 건가...", "다친 곳은 없는 것 같으니... 일단 앞으로 가보자.", 0],
         [0, "설마... 문이 잠겨있는 건가?", "어떻게 나가야 하지?", 0],
@@ -30,20 +30,20 @@ text = [[0, "으윽...", "여기가... 어디지?", "벽이 왜 다 부서졌지
         [0, "나는 연구소에서 무슨 실험을 하고 있었던 거지...", "나는 연구소에서 무슨 실험을 하고 있었던 거지...", "일단 계속 앞으로 나아가자", 0],
         [0, "여기만 치우면 다음 층으로 올라갈 수 있겠군", 0],
         [0, "이곳은 왜 이렇게 시체가 많은 거지...?", 0],
-        [0, "루시퍼님! 살아있으셨군요...!", "전... 루시퍼님이 죽은 줄 알았어요...", "그... 미안한데 제가 기억을 잃어서...", "누구신가요...?",
-         "그렇군요... 제 이름은 나다니엘이에요... 혹시 기억나시나요...?", "죄송해요... 기억이 쉽게 돌아오지는 않는 것 같아요",
-         "괜찮아요... 루시퍼님은 저의 상사셨으니 존댓말 하실 필요는 없어요", "혹시 기억이 얼마나 사라진 거예요?",
-         "음... 정확하진 않지만 내가 임금 문제로 실험실을 고발한 것까지는 기억나", "그럼 제가 루시퍼님의 연구 기록을 찾아볼 테니, 그걸 한번 봐보는 게 어때요?",
+        [0, "루시퍼 님! 살아있으셨군요...!", "전... 루시퍼 님이 죽은 줄 알았어요...", "그... 미안한데 제가 기억을 잃어서...", "누구신가요...?",
+         "그렇군요... 제 이름은 우리엘이에요... 혹시 기억나시나요...?", "죄송해요... 기억이 쉽게 돌아오지는 않는 것 같아요",
+         "괜찮아요... 루시퍼 님은 저의 상사셨으니 존댓말 하실 필요는 없어요", "혹시 기억이 얼마나 사라진 거예요?",
+         "음... 정확하진 않지만 내가 임금 문제로 실험실을 고발한 것까지는 기억나", "그럼 제가 루시퍼 님의 연구 기록을 찾아볼 테니, 그걸 한번 봐보는 게 어때요?",
          "연구 기록을 보면 기억이 돌아올 수도 있어요", "좋아", 0],
-        [0, "제가 확인해 봤는데, 루시퍼님의 연구 기록은 사고에 휘말려 사라진 것 같아요", "하지만 이 컴퓨터에 루시퍼님의 연구 기록이 저장돼있을 거예요", "제가 지금 찾아볼게요",
+        [0, "제가 확인해 봤는데, 루시퍼 님의 연구 기록은 사고에 휘말려 사라진 것 같아요", "하지만 이 컴퓨터에 루시퍼 님의 연구 기록이 저장돼있을 거예요", "제가 지금 찾아볼게요",
          "괜찮아, 내가 직접 찾아볼게", "잠깐 기다리고 있어", 0],
         [0, "초능력은 이런 것도 가능하군...", "그나저나, 여기는 굉장히 평화로워...", "마치 유토피아 같아", 0],
         [0, "여긴 건너가기에는 너무 넓군...", "모처럼 가상세계에 들어왔으니 새로 생긴 초능력을 시험해볼까?", 0],
         [0, "저기에 있는 게 내 연구 기록인 건가?", 0],
         [0, "내... 내가 이런 실험을 했었다고...?", "말도 안 돼... 내가 왜 이런 잔인한 실험을 했던 거지...?", "후... 일단 여기서 나가자", 0],
-        [0, "루시퍼님!", "으... 머리야...", "루시퍼님!! 정신 차려요!!!", "무슨 일이야...?", "루시퍼님이 갑자기 쓰러져서 깜짝 놀랐다고요...",
+        [0, "루시퍼 님!", "으... 머리야...", "루시퍼 님!! 정신 차려요!!!", "무슨 일이야...?", "루시퍼 님이 갑자기 쓰러져서 깜짝 놀랐다고요...",
          "아... 난 괜찮으니까 신경 쓰지 마", "그런데 왜 갑자기 쓰러지신 거예요?", "방금 데이터 세계에 들어가서 내 연구 기록을 보고 왔어", "설마 내가 생체 실험을 했었다니...",
-         "나 자신을 용서할 수가 없군...", "그런 소리 하지 마세요...", "전 루시퍼님을 존경해요...", "그 실험은 세상을 위한 일이었으니까요...",
+         "나 자신을 용서할 수가 없군...", "그런 소리 하지 마세요...", "전 루시퍼 님을 존경해요...", "그 실험은 세상을 위한 일이었으니까요...",
          "이게... 세상을 위한 일이었다고...?", "솔직히 잘 모르겠어...", "하지만 계속 이러고 있을 수는 없지", "다음 층으로 가는 게 좋겠어", 0],
         [0, "이 동물들은 데이터 세계에서 잘살고 있었나요?", "아주 행복하게 사는 것 같았어...", "만약 넌 데이터 세계에 들어가 행복하게 살 수 있다면 들어갈 건가?", "음... 잘 모르겠어요",
          "데이터 세계가 현실보다 행복할 수도 있겠지만, 저는 현실을 살아가는 게 더 가치가 있는 것 같아요...", 0]]
@@ -68,14 +68,14 @@ char = [[0, Lucy, Lucy, Lucy, Lucy, 0],
         [0, Lucy, Lucy, Lucy, 0],
         [0, Lucy, 0],
         [0, Lucy, 0],
-        [0, Mica, Mica, Lucy, Lucy, Mica, Lucy, Mica, Mica, Lucy, Mica, Mica, Lucy, 0],
-        [0, Mica, Mica, Mica, Lucy, Lucy, 0],
+        [0, Uri, Uri, Lucy, Lucy, Uri, Lucy, Uri, Uri, Lucy, Uri, Uri, Lucy, 0],
+        [0, Uri, Uri, Uri, Lucy, Lucy, 0],
         [0, Lucy, Lucy, Lucy, 0],
         [0, Lucy, Lucy, 0],
         [0, Lucy, 0],
         [0, Lucy, Lucy, Lucy, 0],
-        [0, Mica, Lucy, Mica, Lucy, Mica, Lucy, Mica, Lucy, Lucy, Lucy, Mica, Mica, Mica, Lucy, Lucy, Lucy, Lucy, 0],
-        [0, Mica, Lucy, Lucy, Mica, Mica, 0]]
+        [0, Uri, Lucy, Uri, Lucy, Uri, Lucy, Uri, Lucy, Lucy, Lucy, Uri, Uri, Uri, Lucy, Lucy, Lucy, Lucy, 0],
+        [0, Uri, Lucy, Lucy, Uri, Uri, 0]]
 
 pos = [[0, lucy, lucy, lucy, lucy, 0],
        [0, lucy, lucy, 0],
@@ -97,14 +97,14 @@ pos = [[0, lucy, lucy, lucy, lucy, 0],
        [0, lucy, lucy, lucy, 0],
        [0, lucy, 0],
        [0, lucy, 0],
-       [0, mica, mica, lucy, lucy, mica, lucy, mica, mica, lucy, mica, mica, lucy, 0],
-       [0, mica, mica, mica, lucy, lucy, 0],
+       [0, uri, uri, lucy, lucy, uri, lucy, uri, uri, lucy, uri, uri, lucy, 0],
+       [0, uri, uri, uri, lucy, lucy, 0],
        [0, lucy, lucy, lucy, 0],
        [0, lucy, lucy, 0],
        [0, lucy, 0],
        [0, lucy, lucy, lucy, 0],
-       [0, mica, lucy, mica, lucy, mica, lucy, mica, lucy, lucy, lucy, mica, mica, mica, lucy, lucy, lucy, lucy, 0],
-       [0, mica, lucy, lucy, mica, mica, 0]]
+       [0, uri, lucy, uri, lucy, uri, lucy, uri, lucy, lucy, lucy, uri, uri, uri, lucy, lucy, lucy, lucy, 0],
+       [0, uri, lucy, lucy, uri, uri, 0]]
 
 name = [[0, "루시퍼", "루시퍼", "루시퍼", "루시퍼", 0],
         [0, "루시퍼", "루시퍼", 0],
@@ -126,15 +126,15 @@ name = [[0, "루시퍼", "루시퍼", "루시퍼", "루시퍼", 0],
         [0, "루시퍼", "루시퍼", "루시퍼", 0],
         [0, "루시퍼", 0],
         [0, "루시퍼", 0],
-        [0, "???", "???", "루시퍼", "루시퍼", "미카엘", "루시퍼", "미카엘", "미카엘", "루시퍼", "미카엘", "미카엘", "루시퍼", 0],
-        [0, "미카엘", "미카엘", "미카엘", "루시퍼", "루시퍼", 0],
+        [0, "???", "???", "루시퍼", "루시퍼", "우리엘", "루시퍼", "우리엘", "우리엘", "루시퍼", "우리엘", "우리엘", "루시퍼", 0],
+        [0, "우리엘", "우리엘", "우리엘", "루시퍼", "루시퍼", 0],
         [0, "루시퍼", "루시퍼", "루시퍼", 0],
         [0, "루시퍼", "루시퍼", 0],
         [0, "루시퍼", 0],
         [0, "루시퍼", "루시퍼", "루시퍼", 0],
-        [0, "미카엘", "루시퍼", "미카엘", "루시퍼", "미카엘", "루시퍼", "미카엘", "루시퍼", "루시퍼", "루시퍼", "미카엘", "미카엘", "미카엘", "루시퍼", "루시퍼",
+        [0, "우리엘", "루시퍼", "우리엘", "루시퍼", "우리엘", "루시퍼", "우리엘", "루시퍼", "루시퍼", "루시퍼", "우리엘", "우리엘", "우리엘", "루시퍼", "루시퍼",
          "루시퍼", "루시퍼", 0],
-        [0, "미카엘", "루시퍼", "루시퍼", "미카엘", "미카엘", 0]]
+        [0, "우리엘", "루시퍼", "루시퍼", "우리엘", "우리엘", 0]]
 
 namepos = [[0, textlucy, textlucy, textlucy, textlucy, 0],
            [0, textlucy, textlucy, 0],
@@ -156,15 +156,15 @@ namepos = [[0, textlucy, textlucy, textlucy, textlucy, 0],
            [0, textlucy, textlucy, textlucy, 0],
            [0, textlucy, 0],
            [0, textlucy, 0],
-           [0, textmica1, textmica1, textlucy, textlucy, textmica2, textlucy, textmica2, textmica2, textlucy, textmica2,
-            textmica2, textlucy, 0],
-           [0, textmica2, textmica2, textmica2, textlucy, textlucy, 0],
+           [0, texturi1, texturi1, textlucy, textlucy, texturi2, textlucy, texturi2, texturi2, textlucy, texturi2,
+            texturi2, textlucy, 0],
+           [0, texturi2, texturi2, texturi2, textlucy, textlucy, 0],
            [0, textlucy, textlucy, textlucy, 0],
            [0, textlucy, textlucy, 0],
            [0, textlucy, 0],
            [0, textlucy, textlucy, textlucy, 0],
-           [0, textmica2, textlucy, textmica2, textlucy, textmica2, textlucy, textmica2, textlucy, textlucy, textlucy,
-            textmica2, textmica2, textmica2, textlucy, textlucy, textlucy, textlucy, 0],
-           [0, textmica2, textlucy, textlucy, textmica2, textmica2, 0]]
+           [0, texturi2, textlucy, texturi2, textlucy, texturi2, textlucy, texturi2, textlucy, textlucy, textlucy,
+            texturi2, texturi2, texturi2, textlucy, textlucy, textlucy, textlucy, 0],
+           [0, texturi2, textlucy, textlucy, texturi2, texturi2, 0]]
 
 
