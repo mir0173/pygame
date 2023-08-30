@@ -1,4 +1,3 @@
-# pygame
 <h1 align="center"><b>Eden`s Laboratory</b></h1>
 <p align="center">
 <img src="https://img.shields.io/badge/made by-anim-red">
