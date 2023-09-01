@@ -194,7 +194,16 @@ class B5():
                         update(self.screen, self.font, protagonist)
                         pygame.display.update()
                 if self.screen_number == 16:
-                    print('a')
+                    inter = 0
+                    a = 0
+                    diary_ps = pygame.Rect(600, 575, 200, 100)
+                    for i in range(len(protagonist.interact)):
+                        if protagonist.interact[i] == diary_ps:
+                            a = 1
+                    if a == 1:
+                        protagonist.interact.remove(diary_ps)
+                    update(self.screen, self.font, protagonist)
+                    pygame.display.update()
 
             else:
                 resume(self, self.screen, self.font, protagonist)
