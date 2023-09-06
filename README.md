@@ -1,7 +1,6 @@
 <h1 align="center"><b>Tipheret Salvation</b></h1>
 <p align="center">
 <img src="https://img.shields.io/badge/made by-anim-red">
-<img src="https://img.shields.io/badge/with-mingu-yello">
 <img src="https://img.shields.io/badge/Pygame-2.5.1-yellow">
 </p>
 <br/><br/><br/><br/>
