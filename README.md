@@ -1,4 +1,4 @@
-<h1 align="center"><b>Eden`s Company</b></h1>
+<h1 align="center"><b>Tipheret Salvation</b></h1>
 <p align="center">
 <img src="https://img.shields.io/badge/made by-anim-red">
 <img src="https://img.shields.io/badge/with-mingu-yello">
