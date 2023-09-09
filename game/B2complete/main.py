@@ -19,7 +19,7 @@ font = [fontObj, fontObj2, fontObj3, fontObj4]
 
 
 def main():
-    global lista, indexc
+    global lista, indexc, key3
     screen = pygame.display.set_mode((1600, 900))
     character_right = pygame.image.load('./assets/protagonist_male.png').convert_alpha()
     character_left = pygame.image.load('./assets/protagonist_male2.png').convert_alpha()
@@ -30,7 +30,7 @@ def main():
         key = key13[0]
         key3 = key13[1]
         key2 = restart()
-        '''if key2 != 1 and key > 5:
+        if key2 != 1 and key > 5:
             a = B6.B6(screen, font)
             a.tutorial(character_left, character_right)
         key2 = restart()
@@ -46,7 +46,7 @@ def main():
         if key2 != 1 and key > 3:
             c = B4.B4(screen, font)
             c.story(character_left, character_right)
-        key2 = restart()'''
+        key2 = restart()
         if key2 != 1 and key > 1:
             e = B2.B2(screen, font)
             e.story(character_left, character_right)
