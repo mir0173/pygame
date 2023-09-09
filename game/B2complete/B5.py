@@ -309,7 +309,6 @@ class B5():
                     end = ((int)((len(invent.owndiary) - 1) / 2)) * 2 + 1
                     number2 = invent.viewdiary(self.screen, self.font, number2, protagonist, npc_list)
                     if len(invent.owndiary) != 0:
-                        self.screen.blit(Gray, (0, 0))
                         self.screen.blit(diary[invent.owndiary[number2 - 1]], diary1pos)
                         if number2 != end or (number2 == end and len(invent.owndiary) % 2 == 0):
                             self.screen.blit(diary[invent.owndiary[number2]], diary2pos)
