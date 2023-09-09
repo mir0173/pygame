@@ -5,7 +5,7 @@ import B2
 import B4
 import B5
 import B6
-from system import restart, restartok
+from system import restart, restartok, indexc
 from start import first
 from sprite import protagonist
 
@@ -19,7 +19,7 @@ font = [fontObj, fontObj2, fontObj3, fontObj4]
 
 
 def main():
-    global lista
+    global lista, indexc
     screen = pygame.display.set_mode((1600, 900))
     character_right = pygame.image.load('./assets/protagonist_male.png').convert_alpha()
     character_left = pygame.image.load('./assets/protagonist_male2.png').convert_alpha()
@@ -50,6 +50,7 @@ def main():
         if key2 != 1 and key > 1:
             e = B2.B2(screen, font)
             e.story(character_left, character_right)
+            key3 = system.indexc
         '''if key2 != 1 and key > 0:
             if key3 == 0:
                 f = B1.B1(screen, font, 0)
