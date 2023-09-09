@@ -177,7 +177,7 @@ def resume(floor, screen, font, protagonist, npc_list):
         screen.blit(ui(floor, pausesave, pausesave_data), (0, 0))
         screen.blit(ui(floor, pausemain, pausemain_data), (0, -5))
     elif 697 <= pos[0] <= 901 and 478 <= pos[1] <= 552:
-        screen.blit(ui(floor, pauseexit, pausepopup_data), (0, 0))
+        screen.blit(ui(floor, pauseexit, pauseexit_data), (0, 0))
         screen.blit(ui(floor, pausemain, pausemain_data), (0, -5))
     else:
         screen.blit(ui(floor, pausepopup, pausepopup_data), (0, 0))
