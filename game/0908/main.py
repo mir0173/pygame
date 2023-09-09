@@ -1,9 +1,10 @@
 import pygame
 
+import B2
 import B4
 import B5
 import B6
-from system import restart
+from system import restart, restartok
 from start import first
 from sprite import protagonist
 
@@ -22,6 +23,7 @@ def main():
     character_left = pygame.image.load('./assets/protagonist_male2.png').convert_alpha()
     while True:
         pygame.mouse.set_visible(False)
+        restartok()
         key = first(screen, font, protagonist)
         key2 = restart()
         if key2 != 1 and key > 5:
@@ -37,12 +39,14 @@ def main():
             b = B5.B5(screen, font)
             b.story(character_left, character_right)
         key2 = restart()
-        '''if key2 != 1 and key > 4:
+        if key2 != 1 and key > 3:
             c = B4.B4(screen, font)
             c.story(character_left, character_right)
-        if key2 != 1 and key > 3:
+        key2 = restart()
+        '''if key2 != 1 and key > 1:
             e = B2.B2(screen, font)
-            e.story(character_left, character_right)'''
+            e.story(character_left, character_right)
+        key2 = restart()'''
 
 
 main()

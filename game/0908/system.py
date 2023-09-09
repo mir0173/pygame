@@ -6,7 +6,10 @@ from background import movable_image
 
 index = [[6, 1, 0], [6, 1, 0], [6, 1, 0], [6, 2, 0], [6, 2, 0], [6, 3, 0], [6, 3, 0], [5, 1, 1], [5, 1, 1], [5, 2, 1],
          [5, 2, 1], [5, 2, 1], [5, 2, 1], [5, 3, 1], [5, 3, 1], [5, 3, 1], [5, 3, 1], [5, 4, 1], [5, 4, 1], [4, 1, 2],
-         [4, 2, 2], [4, 3, 2], [4, 3, 2], [4, 3, 2], [4, 4, 2], [4, 4, 2]]
+         [4, 2, 2], [4, 3, 2], [4, 3, 2], [4, 3, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2],
+         [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2],
+         [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2], [4, 4, 2],
+         ]
 
 BLACK = pygame.Color(0, 0, 0)
 pausepopup = pygame.image.load('./assets/pause.png')
@@ -123,6 +126,8 @@ def save(screen, font, protagonist, number):
                     floornow[saveindex] = 5
                 elif protagonist.screen_number >= 19 and protagonist.screen_number <= 25:
                     floornow[saveindex] = 4
+                elif protagonist.screen_number >= 34 and protagonist.screen_number <= 41:
+                    floornow[saveindex] = 2
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     return -1
@@ -200,7 +205,6 @@ def update(screen, font, protagonist):
 def restart():
     global key
     if key == 1:
-        restartok()
         return 1
     else:
         return 0

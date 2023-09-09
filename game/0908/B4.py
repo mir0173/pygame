@@ -3,7 +3,7 @@ from system import resume, esc, update
 import sprite
 from dialogue import dialogue
 from background import right_area, screen_change
-from interaction import interaction, diaryinter, inventory, viewdiary, owndiary2
+from interaction import interaction, diaryinter, inventory, viewdiary, owndiary2, cleardiary
 import moving
 from diaryinteraction import diary
 
@@ -19,6 +19,7 @@ class B4():
         self.tostart = False
 
     def story(self, character_left, character_right):
+        cleardiary(4)
         pygame.mouse.set_visible(True)
         protagonist = sprite.protagonist(self.font, character_left, character_right, 19)
         update(self.screen, self.font, protagonist)

@@ -3,7 +3,7 @@ from system import resume, esc, update
 import sprite
 from dialogue import dialogue
 from background import right_area, screen_change
-from interaction import interaction, diaryinter, inventory, viewdiary, owndiary2
+from interaction import interaction, diaryinter, inventory, viewdiary, owndiary2, cleardiary
 from diaryinteraction import diary
 from wire import wire_gimmick
 
@@ -22,6 +22,7 @@ class B5():
         self.tostart = False
 
     def story(self, character_left, character_right):
+        cleardiary(5)
         protagonist = sprite.protagonist(self.font, character_left, character_right, 7)
         protagonist.alpha = 125
         update(self.screen, self.font, protagonist)

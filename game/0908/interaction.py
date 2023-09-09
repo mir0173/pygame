@@ -117,3 +117,18 @@ def viewdiary(screen, font, number, protagonist):
             return -1
         return number
 
+def cleardiary(number):
+    global havediary
+    if number == 5:
+        for i in range(0, 14):
+            havediary[i] = 0
+
+    if number == 4:
+        for i in range(3, 14):
+            havediary[i] = 0
+    if number == 3:
+        for i in range(6, 14):
+            havediary[i] = 0
+    if number == 2:
+        for i in range(9, 13):
+            havediary[i] = 0
