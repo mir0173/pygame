@@ -10,7 +10,8 @@ class B1():
     def cutscene(self):
         return
 
-    def start(self, font, character_left, character_right):
+    def start(self, font, character_left, character_right, isc):
+        self.ifC = isc
         protagonist = sprite.protagonist(font, character_left, character_right, 31)
         
 

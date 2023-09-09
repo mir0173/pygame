@@ -51,12 +51,12 @@ def first(screen, font, protagonist):
                     pygame.display.update()
                     pygame.time.wait(1000)
                     image_gray.set_alpha(0)
-                    return 7
+                    return (7, 0)
                 screen.blit(start1, (0, 0))
             elif 570 <= pos[0] <= 1015 and 676 <= pos[1] <= 750:
                 if click[0] == 1:
                     key = save(screen, font, protagonist, 0)
-                    if key != -1:
+                    if key != (-1, 0):
                         return key
                 screen.blit(start2, (0, 0))
             elif 570 <= pos[0] <= 1015 and 779 <= pos[1] <= 864:

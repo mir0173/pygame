@@ -54,6 +54,8 @@ save53.set_colorkey(BLACK)
 key = 0
 saveindex = 0
 floornow = [0, 0, 0, 0, 0, 0]
+isc = 0
+indexc = 0
 
 def esc(floor, screen, font, protagonist):
     pygame.mouse.set_visible(True)
@@ -76,7 +78,7 @@ def esc1(screen, font, protagonist):
         pygame.display.update()
 
 def save(screen, font, protagonist, number):
-    global saveindex, floornow
+    global saveindex, floornow, indexc
     saveindex = 0
     X = True
     while X:
@@ -128,15 +130,26 @@ def save(screen, font, protagonist, number):
                     floornow[saveindex] = 4
                 elif protagonist.screen_number >= 34 and protagonist.screen_number <= 41:
                     floornow[saveindex] = 2
+                    if indexc == 0:
+                        isc[saveindex] = 0
+                    elif indexc == 1:
+                        isc[saveindex] = 1
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
-                    return -1
+                    return (-1, 0)
                 if event.key == pygame.K_RETURN:
                     if floornow[saveindex] != 0:
-                        return floornow[saveindex]
+                        return (floornow[saveindex], indexc)
             if event.type == pygame.QUIT:
                 pygame.quit()
 
+def havec():
+    global indexc
+    indexc = 1
+
+def nothavec():
+    global indexc
+    indexc = 0
 def resume(floor, screen, font, protagonist):
     global key
     update(screen, font, protagonist)
