@@ -86,10 +86,9 @@ class Protagonist():
         self.mouse_clicked = True
         self.mask = pygame.mask.from_surface(self.image)
 
-        self.ui = pygame.image.load('./assets/ui7.png')
+        self.ui = pygame.image.load('./assets/ui8.png')
         self.ui = pygame.transform.scale(self.ui, (1600, 900))
         self.ui.set_colorkey((255, 255, 254))
-
 
     def get_image(self, frame, scale, color, mod):
         if mod == 0:
@@ -228,7 +227,6 @@ class Protagonist():
         screen.blit(self.image, self.player)
         self.movable_obstacle(screen)
         self.health_bar(screen)
-        #pygame.draw.rect(screen, (255, 0, 0), self.hitbox)
 
     def movable_obstacle(self, screen):
         for x in range(len(self.movable)):
@@ -577,6 +575,7 @@ class Michael():
         self.explosion_list.add(explosion)
 
         self.x = 0
+        self.y = 0
 
     def get_image(self, frame, scale, color, leftright):
         if leftright == 0:
@@ -721,12 +720,13 @@ class Michael():
         if self.attack_type == 2:
             if self.attack_time == 60:
                 self.x = target.rect.centerx
-                open_cage = Cage(self.cage_image, self.x, 0)
+                self.y = target.rect.bottom
+                open_cage = Cage(self.cage_image, self.x, self.y, 0)
                 target.obstacle.append(open_cage.rect)
                 target.movable.append(0)
                 target.movable_image.append(self.cage_image)
                 self.cage_list.add(open_cage)
-                close_cage = Cage(self.cage_image, self.x, 1)
+                close_cage = Cage(self.cage_image, self.x, self.y, 1)
                 target.obstacle.append(close_cage.rect)
                 target.movable.append(1)
                 target.movable_image.append(self.cage_image)
@@ -826,7 +826,7 @@ class Magic(pygame.sprite.Sprite):
             self.kill()
 
 class Cage(pygame.sprite.Sprite):
-    def __init__(self, image, x, oc):
+    def __init__(self, image, x, y, oc):
         super().__init__()
         self.oc = oc
         self.image = image
@@ -834,14 +834,14 @@ class Cage(pygame.sprite.Sprite):
             self.image = self.sprite_image((80, 150), (120, 130, 80, 150))
             self.rect = self.image.get_rect()
             self.cage_x = x - 70
-            self.cage_y = 775
+            self.cage_y = y + 10
             self.rect.centerx = self.cage_x
             self.rect.bottom = self.cage_y
         if self.oc == 1:
             self.image = self.sprite_image((80, 150), (120, 130, 80, 150))
             self.rect = self.image.get_rect()
             self.cage_x = x + 70
-            self.cage_y = 775
+            self.cage_y = y
             self.rect.centerx = self.cage_x
             self.rect.bottom = self.cage_y
 
@@ -888,7 +888,7 @@ class Drop(pygame.sprite.Sprite):
             self.image = self.animation_list[self.frame]
             self.rect = self.image.get_rect()
             self.rect.centerx = self.drop_x
-            self.rect.bottom = 775
+            self.rect.bottom = 0
             if self.frame == len(self.animation_list)-1:
                 self.kill()
         else:
@@ -993,6 +993,7 @@ class Michael_final():
         self.sword_aura_image_right = pygame.transform.flip(self.sword_aura_image_left, True, False)
         self.sword_gun_image_left = pygame.transform.scale(pygame.image.load('./assets/sword_gun.png').convert_alpha(), (420, 420)).convert_alpha()
         self.sword_gun_image_right = pygame.transform.flip(self.sword_gun_image_left, True, False)
+        #self.sword_gun_shooting = pygame.mixer.Sound('./asstes/sword_shot.mp3')
 
         self.sword_aura_list = pygame.sprite.Group()
         self.sword_gun_list = pygame.sprite.Group()
@@ -1109,6 +1110,7 @@ class Michael_final():
                     self.sword_gun_2 = Sword_gun(self.player.centerx-400, randint(300, 500), self.sword_gun_image_right, target, 1)
                     self.sword_gun_3 = Sword_gun(self.player.centerx-400, randint(500, 700), self.sword_gun_image_right, target, 1)
                     self.sword_gun_list.add(self.sword_gun_1, self.sword_gun_2, self.sword_gun_3)
+
                 self.sword_gun_list.update()
                 self.sword_gun_list.draw(screen)
             screen.blit(self.player_image, self.player)
