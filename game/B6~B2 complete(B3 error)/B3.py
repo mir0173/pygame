@@ -191,7 +191,7 @@ class B3():
                                     a = 1
                             if a == 1:
                                 protagonist.interact.remove(bird_im)
-                        if inter == 1:
+                        if inter == 1 and i == 0:
                             a = 0
                             for i in range(len(protagonist.interact)):
                                 if protagonist.interact[i] == bird_im:
@@ -208,6 +208,7 @@ class B3():
                                     a = 1
                             if a == 1:
                                 protagonist.interact.remove(bird_im)
+                                i = 1
 
                             update(self.screen, self.font, protagonist, npc_list)
                             pygame.display.update()

@@ -251,9 +251,13 @@ class B2():
                     elif p == 1:
                         pygame.mouse.set_visible(True)
                         npc_list[2].visible = True
+                        npc_list[2].npc.top = 600
                         npc_list[3].visible = True
+                        npc_list[3].npc.top = 600
                         npc_list[4].visible = True
+                        npc_list[4].npc.top = 590
                         npc_list[5].visible = True
+                        npc_list[5].npc.top = 590
                         bul = [npc_list[2].npc, npc_list[3].npc, npc_list[4].npc, npc_list[5].npc]
                         intera[0] = interaction(protagonist.player, bul[0])
                         intera[1] = interaction(protagonist.player, bul[1])

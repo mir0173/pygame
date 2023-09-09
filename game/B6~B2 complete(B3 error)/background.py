@@ -42,10 +42,10 @@ background_list.append(pygame.transform.scale(pygame.image.load('./assets/0-2.pn
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/0-3.png'), (160 * 10, 90 * 10)))
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/0-4diary.png'), (160 * 10, 90 * 10)))
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/0-4nodiary.png'), (160 * 10, 90 * 10)))
-background_list.append(pygame.transform.scale(pygame.image.load('./assets/0-4nodiary.png'), (160 * 10, 90 * 10)))
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/3-2.png'), (160 * 10, 90 * 10)))
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/3-4.png'), (160 * 10, 90 * 10)))
 
+background_list.append(pygame.transform.scale(pygame.image.load('./assets/2-1diary.png'), (160 * 10, 90 * 10)))  # 2층
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/2-1diary.png'), (160 * 10, 90 * 10)))  # 2층
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/2-1nodiary.png'), (160 * 10, 90 * 10)))
 background_list.append(pygame.transform.scale(pygame.image.load('./assets/2-1nodiary.png'), (160 * 10, 90 * 10)))
