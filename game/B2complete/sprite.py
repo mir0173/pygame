@@ -255,13 +255,13 @@ class protagonist():
             text3 = pygame.image.load('./assets/tutorial7.png')
             text3.set_colorkey((0, 0, 0))
             screen.blit(text3, (50, 200))
-            if self.screen_number == 43:
-                text3 = pygame.image.load('./assets/tutorial9.png')
-                text3.set_colorkey((0, 0, 0))
-                screen.blit(text3, (50, 300))
-                text3 = pygame.image.load('./assets/tutorial10.png')
-                text3.set_colorkey((0, 0, 0))
-                screen.blit(text3, (50, 200))
+        if self.screen_number == 43:
+            text3 = pygame.image.load('./assets/tutorial9.png')
+            text3.set_colorkey((0, 0, 0))
+            screen.blit(text3, (50, 300))
+            text3 = pygame.image.load('./assets/tutorial10.png')
+            text3.set_colorkey((0, 0, 0))
+            screen.blit(text3, (50, 200))
         pygame.display.update()
 
         self.sound = (self.sound + 1) % 10
