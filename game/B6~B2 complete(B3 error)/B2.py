@@ -484,6 +484,6 @@ class B2():
                 return
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    run = False
                     pygame.quit()
+                    exit()
         return
