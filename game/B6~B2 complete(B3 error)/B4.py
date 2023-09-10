@@ -2,7 +2,7 @@ import pygame
 from system import resume, esc, update
 import sprite
 from dialogue import dialogue
-from background import right_area, screen_change
+from background import right_area, screen_change, obstacle_list
 from interaction import interaction, diaryinter, Inventory, cleardiary
 import moving
 from diaryinteraction import diary
@@ -15,6 +15,14 @@ class B4():
         self.font = font
         self.pause = False
         self.tostart = False
+        obstacle_list[19] = [pygame.Rect(-500, 775, 2600, 125), pygame.Rect(-500, -100, 2600, 100),
+                             pygame.Rect(900, 520, 125, 125), pygame.Rect(900, 650, 125, 125)]
+        obstacle_list[20] = [pygame.Rect(-500, 775, 2600, 125), pygame.Rect(-500, -100, 2600, 100),
+                             pygame.Rect(400, 650, 125, 125), pygame.Rect(400, 275, 125, 250), pygame.Rect(525, 650, 125, 125),
+                             pygame.Rect(1100, 525, 125, 250)]
+        obstacle_list[24] = [pygame.Rect(-500, 775, 2600, 125), pygame.Rect(-500, -100, 2600, 100),
+                             pygame.Rect(400, 525, 125, 125), pygame.Rect(400, 650, 125, 125), pygame.Rect(525, 525, 125, 125),
+                             pygame.Rect(525, 650, 125, 125), pygame.Rect(775, 525, 125, 375), pygame.Rect(1025, 275, 125, 500)]
 
     def story(self, character_left, character_right):
         cleardiary(4)
