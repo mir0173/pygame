@@ -43,7 +43,7 @@ class B3():
         run = True
         canmove = False
         d1 = dialogue(19, self.screen, self.font, protagonist, npc_list)
-        if d1 = 1:
+        if d1 == 1:
             canmove = True
         d2 = 0
         d4 = 0
