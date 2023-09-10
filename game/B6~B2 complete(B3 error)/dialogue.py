@@ -26,8 +26,8 @@ def dialogue(a, screen, font, protagonist, npc_list):
                 if i == 5:
                     i = 0
             if event.type == pygame.QUIT:
-                run = False
                 pygame.quit()
+                exit()
             if k == 1:
                 run = False
     pygame.event.clear()
