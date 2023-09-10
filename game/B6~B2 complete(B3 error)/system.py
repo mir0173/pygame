@@ -158,8 +158,8 @@ def save(screen, font, protagonist, number):
                     if floornow[saveindex] != 0:
                         return (floornow[saveindex], indexc)
             if event.type == pygame.QUIT:
-                  pygame.quit()
-                  exit()
+                pygame.quit()
+                exit()
 
 
 def havec():
