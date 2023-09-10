@@ -13,7 +13,6 @@ textmich = pygame.Rect(1410, 690, 0, 0)
 
 Luci = pygame.image.load('./assets/lucifer.png')
 Uri = pygame.image.load('./assets/uriel.png')
-Bul = pygame.image.load('./assets/lucifer.png')
 SilA = pygame.image.load('./assets/silA.png')
 SilB = pygame.image.load('./assets/silB.png')
 SilC = pygame.image.load('./assets/silC.png')
