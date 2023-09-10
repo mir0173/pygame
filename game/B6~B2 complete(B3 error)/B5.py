@@ -423,8 +423,8 @@ class B5:
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    run = False
                     pygame.quit()
+                    exit()
             step += 1
             if 25 < step < 105:
                 text = self.font[0].render("이 프로그램은 뭐지..", True, (255, 255, 255))
