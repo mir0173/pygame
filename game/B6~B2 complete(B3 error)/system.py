@@ -145,8 +145,12 @@ def save(screen, font, protagonist, number):
                     floornow[saveindex] = 5
                 elif protagonist.screen_number >= 19 and protagonist.screen_number <= 25:
                     floornow[saveindex] = 4
-                elif protagonist.screen_number >= 34 and protagonist.screen_number <= 41:
+                elif protagonist.screen_number >= 26 and protagonist.screen_number <= 35:
+                    floornow[saveindex] = 3
+                elif protagonist.screen_number >= 36 and protagonist.screen_number <= 47:
                     floornow[saveindex] = 2
+                elif protagonist.screen_number >= 48:
+                    floornow[saveindex] = 1
                     if indexc == 0:
                         isc[saveindex] = 0
                     elif indexc == 1:
